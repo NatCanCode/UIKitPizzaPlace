@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22503"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,8 +72,76 @@
             </objects>
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
         </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="Tgf-WO-C7d">
+            <objects>
+                <viewController id="Nw7-CN-Lln" customClass="OnboardingViewController" customModule="UIKitInitiation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8un-te-u9W">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pepperoni" translatesAutoresizingMaskIntoConstraints="NO" id="Az8-nQ-8bn">
+                                <rect key="frame" x="19" y="86" width="354" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1fj-ST-RiL"/>
+                                    <constraint firstAttribute="width" constant="354" id="WrU-NB-WeC"/>
+                                    <constraint firstAttribute="width" secondItem="Az8-nQ-8bn" secondAttribute="height" multiplier="59:25" id="c7E-v8-W38"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="0Av-cy-Iym">
+                                <rect key="frame" x="47.333333333333343" y="510" width="298.33333333333326" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="eYZ-jq-xlL"/>
+                                    <constraint firstAttribute="width" secondItem="0Av-cy-Iym" secondAttribute="height" multiplier="15:8" id="hJq-gx-8J3"/>
+                                    <constraint firstAttribute="width" constant="354" id="oPb-tp-NoX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cP-rM-RAo">
+                                <rect key="frame" x="29" y="737" width="335" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7rJ-dy-QxV"/>
+                                    <constraint firstAttribute="width" constant="335" id="AZs-Pa-CzH"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Accéder au menu">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Chez Toto" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="co4-6E-s94">
+                                <rect key="frame" x="76" y="97" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="onU-gR-Duc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4cP-rM-RAo" firstAttribute="top" secondItem="0Av-cy-Iym" secondAttribute="bottom" constant="78" id="1v7-kg-bZz"/>
+                            <constraint firstItem="4cP-rM-RAo" firstAttribute="top" secondItem="0Av-cy-Iym" secondAttribute="bottom" constant="80" id="BQR-L0-c3g"/>
+                            <constraint firstItem="0Av-cy-Iym" firstAttribute="centerX" secondItem="onU-gR-Duc" secondAttribute="centerX" id="nk4-mU-cWp"/>
+                            <constraint firstItem="0Av-cy-Iym" firstAttribute="centerX" secondItem="8un-te-u9W" secondAttribute="centerX" id="p4B-RN-Q9S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siy-2m-7tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332.06106870229007" y="-679.57746478873241"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="map" width="118" height="53"/>
+        <image name="pepperoni" width="118" height="50"/>
+        <namedColor name="AccentColor">
+            <color red="0.77254901960784317" green="0.22745098039215686" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
