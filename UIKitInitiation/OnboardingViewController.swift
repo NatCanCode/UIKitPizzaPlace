@@ -8,7 +8,16 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
+    @IBOutlet weak var onboardingTitle: UIStackView!
+    @IBOutlet weak var onboardingImage: UIImageView!
+    @IBOutlet weak var map: UIImageView!
+    @IBOutlet weak var daysOpen: UIStackView!
+    @IBOutlet weak var contactDetails: UIStackView!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var website: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var menuButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
